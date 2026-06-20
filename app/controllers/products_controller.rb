@@ -1,4 +1,4 @@
-# typed: false
+# typed: true
 
 class ProductsController < ApplicationController
   allow_unauthenticated_access only: %i[ index show ]
@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
   private
 
   def set_product
-    @product = Product.find(params[:id])
+    @product = Product.find(params.require :id)
   end
 
   def product_params
