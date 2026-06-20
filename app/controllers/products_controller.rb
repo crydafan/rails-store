@@ -46,7 +46,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.expect(product: [ :name, :description, :featured_image ])
+    params.expect(product: [ :name, :description, :featured_image, :inventory_count ])
   end
 
   def switch_locale(&action)
