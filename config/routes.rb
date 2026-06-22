@@ -1,4 +1,5 @@
 # typed: strict
+
 Rails.application.routes.draw do
   resource :session
   resources :passwords, param: :token
@@ -15,5 +16,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "products#index"
 
-  resources :products
+  resources :products do
+    resources :subscribers, only: [:create]
+  end
 end
