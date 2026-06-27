@@ -1,4 +1,5 @@
 # typed: true
+
 class CreateSessions < ActiveRecord::Migration[8.1]
   def change
     create_table :sessions do |t|

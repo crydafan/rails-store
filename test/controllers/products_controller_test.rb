@@ -1,4 +1,5 @@
 # typed: strict
+
 require "test_helper"
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest

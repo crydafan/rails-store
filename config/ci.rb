@@ -1,4 +1,5 @@
 # typed: false
+
 # Run using bin/ci
 
 CI.run do
